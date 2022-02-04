@@ -17,6 +17,7 @@ public class App extends Application {
         // TODO Auto-generated method stub
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/GUI.fxml"));
         Scene scene = new Scene(root);
+        arg0.initStyle(StageStyle.DECORATED);
         scene.getStylesheets().add(getClass().getResource("/CSS/CSS.css").toExternalForm());
         arg0.setScene(scene);
         arg0.show();
