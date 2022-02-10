@@ -6,4 +6,11 @@
     -fx-background-image: url("/Image/top-view-hands-making-heart-with-peace-sign_23-2148630416.jpg");
     
 }
+.button{
+    -fx-border-color: #f7bdbd;
+    -fx-border: none;
+    -fx-background: none; 
+    /*-fx-background-radius: 80%;*/
+    -fx-background-image: url("/Image/top-view-hands-making-heart-with-peace-sign_23-2148630416.jpg");
+}
 
