@@ -1,6 +1,3 @@
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
 
 import DataBase.DBConnection;
 import javafx.application.Application;
@@ -16,6 +13,7 @@ public class App extends Application {
     public static void main(String[] args) throws ClassNotFoundException {
         DBConnection dbc = new DBConnection();
         dbc.DatabaseConnect();
+        dbc.DisconnectDB();
         launch(args);
     }
 

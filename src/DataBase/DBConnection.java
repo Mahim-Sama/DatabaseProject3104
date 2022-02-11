@@ -18,14 +18,17 @@ public class DBConnection {
         } catch (SQLException e) {
             System.out.println("Connection Failed");
             e.printStackTrace();
-        }finally{
-            try{
-                if(connection != null && !connection.isClosed()){
+        }
+    }
+
+    public void DisconnectDB(){
+        try{
+            if(connection != null && !connection.isClosed()){
                     connection.close();
-                }
-            }catch(SQLException e){
-                e.printStackTrace();
+                    System.out.println("***Disconnected***");
             }
+        }catch(SQLException e){
+                e.printStackTrace();
         }
     }
 }
