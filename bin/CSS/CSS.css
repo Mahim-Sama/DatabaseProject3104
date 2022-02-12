@@ -7,10 +7,8 @@
     
 }
 .button{
-    -fx-border-color: #f7bdbd;
     -fx-border: none;
-    -fx-background: none; 
+    -fx-border-radius: 100%;
+    -fx-background-color: #00FFFF; 
     /*-fx-background-radius: 80%;*/
-    -fx-background-image: url("/Image/top-view-hands-making-heart-with-peace-sign_23-2148630416.jpg");
-}
 

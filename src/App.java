@@ -13,8 +13,10 @@ public class App extends Application {
     public static void main(String[] args) throws ClassNotFoundException {
         DBConnection dbc = new DBConnection();
         dbc.DatabaseConnect();
-        dbc.DisconnectDB();
         launch(args);
+        
+        
+        dbc.DisconnectDB();
     }
 
     @Override
