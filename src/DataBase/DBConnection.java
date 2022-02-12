@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class DBConnection {
     private Connection connection;
-    private final static String dbUrl = "jdbc:sqlserver://localhost:1433;user=sa;password=password123;databaseName=RefugeeManagementSystem";
+    private final static String dbUrl = "jdbc:sqlserver://localhost:1433;user=sa;password=p@ssword13;databaseName=RefugeeManagementSystem";
 
     public void DatabaseConnect() throws ClassNotFoundException {
         Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
