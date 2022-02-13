@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="433.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label layoutX="77.0" layoutY="147.0" text="username" />
@@ -21,7 +20,7 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <Label layoutX="226.0" layoutY="294.0" text="Don&quot;t have an Account? Create one," textFill="#e10707" />
-      <Button layoutX="425.0" layoutY="290.0" mnemonicParsing="false" text="Register" textFill="#1505ef" />
+      <Label layoutX="193.0" layoutY="294.0" text="Don&quot;t have an Account? Create one," textFill="#e10707" />
+      <Button layoutX="392.0" layoutY="290.0" mnemonicParsing="false" text="Register" textFill="#1505ef" />
    </children>
 </AnchorPane>
