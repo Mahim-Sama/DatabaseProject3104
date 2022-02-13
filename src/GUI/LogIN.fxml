@@ -9,18 +9,24 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="433.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label layoutX="77.0" layoutY="147.0" text="username" />
-      <TextField fx:id="textusername" layoutX="165.0" layoutY="143.0" prefHeight="26.0" prefWidth="381.0" promptText="username" />
+      <Label layoutX="77.0" layoutY="94.0" text="username" />
+      <TextField fx:id="username" layoutX="165.0" layoutY="90.0" prefHeight="26.0" prefWidth="381.0" promptText="username" />
       <Label layoutX="78.0" layoutY="194.0" text="password" />
-      <PasswordField fx:id="pfpassword" layoutX="165.0" layoutY="190.0" prefHeight="26.0" prefWidth="382.0" promptText="must be  4 characters or more" />
-      <Label layoutX="78.0" layoutY="95.0" text="Email" />
-      <TextField fx:id="txtemail" layoutX="165.0" layoutY="91.0" prefHeight="26.0" prefWidth="382.0" promptText="email" />
-      <Button layoutX="289.0" layoutY="248.0" mnemonicParsing="false" text="Log in">
+      <PasswordField fx:id="password" layoutX="165.0" layoutY="190.0" prefHeight="26.0" prefWidth="382.0" promptText="must be  4 characters or more" />
+      <Label layoutX="89.0" layoutY="146.0" text="Email" />
+      <TextField fx:id="email" layoutX="165.0" layoutY="142.0" prefHeight="26.0" prefWidth="382.0" promptText="email" />
+      <Button layoutX="289.0" layoutY="248.0" mnemonicParsing="false" onAction="#LoginButtonAction" text="Log in">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
+<<<<<<< HEAD
       <Label layoutX="193.0" layoutY="294.0" text="Don&quot;t have an Account? Create one," textFill="#e10707" />
       <Button layoutX="392.0" layoutY="290.0" mnemonicParsing="false" text="Register" textFill="#1505ef" />
+=======
+      <Label layoutX="226.0" layoutY="294.0" text="Don&quot;t have an Account? Create one," textFill="#e10707" />
+      <Button layoutX="425.0" layoutY="290.0" mnemonicParsing="false" onAction="#RegisterButtonAction" text="Register" textFill="#1505ef" />
+      <Label fx:id="label" layoutX="305.0" layoutY="340.0" />
+>>>>>>> 5276791506759066cc8492f4be63341502d99438
    </children>
 </AnchorPane>
