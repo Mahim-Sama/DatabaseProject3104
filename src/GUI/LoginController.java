@@ -18,6 +18,10 @@ public class LoginController {
     public PasswordField txtpasswordfield;
     public Label errortxt;
 
+    public static String useremail = null;
+    public static User userObj;
+    public static int uid = 0;
+
     public void LoginButtonAction(Event event)throws IOException{
         String username =txtusername.getText();
         String email = txtemail.getText();
@@ -27,9 +31,9 @@ public class LoginController {
             User user = User.get_info(email);
             if(user.get_pass().equals(password)){
                 System.out.println("");
-                useremail = email;
-                userObj = user;
-                uid = user.get_id();
+                 useremail = email;
+                 userObj = user;
+                 uid = user.get_id();
                 Parent window;
                 window = FXMLLoader.load(getClass().getResource(""));
 

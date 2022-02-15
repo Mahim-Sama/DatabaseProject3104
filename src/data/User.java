@@ -1,8 +1,10 @@
 package data;
 
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import DataBase.DBConnection;
+import GUI.LoginController;
 
 public class User {
     DBConnection connector;
@@ -45,7 +47,42 @@ public void set_pass(String pass){
 }
 public void insert() throws SQLException{
     String query = "insert into \"user\"(name, email, phone, pass) values('" + name + "', '" + email + "', '" + phone + "', '" + pass + "' )";
-   // DBConnection conn = new DBConnection();
-    //conn.DatabaseConnect().executeUpdate(query);
+    DBConnection conn = new DBConnection();
+    conn.DatabaseConnect().executeUpdate(query);
+}
+  
+public void update() throws SQLException{
+    String new_id = String.valueOf(LoginController.uid);
+
+    String query= "update \"user\" set name='" + name + "', email='" + email + "', phone='" + phone + "', pass='" + pass + "',  where id=" + new_id + ";";
+    System.out.println(query);
+    DBConnection conn = new DBConnection();
+    conn.createStatement().executeUpdate(query);
+}
+
+public void delete() throws SQLException{
+    String query = "delete from \"user\" where id=" + id;
+    DBConnection conn = new DBConnection();
+    conn.createStatement().execute(query);
+}
+
+private void convert_User(ResultSet resultSet) throws SQLException{
+    id = resultSet.getInt("id");
+    name = resultSet.getString("name");
+    email = resultSet.getString("email");
+    phone = resultSet.getString("phone");
+    pass = resultSet.getString("pass");
+    
+}
+
+public static User get_info(String mobile) throws SQLException{
+    String query = "select * from \"user\" where mobile='" + mobile + "'";
+    DBConnection con = new DBConnection();
+    ResultSet resultSet = con.createStatement().executeQuery(query);
+    resultSet.next();
+    User user = new User();
+    user.convert_User(resultSet);
+    return user;
+}
 }
 
