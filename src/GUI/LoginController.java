@@ -26,13 +26,10 @@ public class LoginController {
     public PasswordField txtpasswordfield;
     public Label errortxt;
 
-<<<<<<< HEAD
     public static String useremail = null;
     public static User userObj;
     public static int uid = 0;
-=======
     User user = new User();
->>>>>>> f252324bfd3dcf1003470d2e6b2dfec26f22e28c
 
     public void LoginButtonAction(Event event)throws IOException{
         String username =txtusername.getText();
@@ -43,15 +40,12 @@ public class LoginController {
             user.get_id(email);
             if(user.get_pass().equals(password)){
                 System.out.println("");
-<<<<<<< HEAD
                  useremail = email;
                  userObj = user;
                  uid = user.get_id();
-=======
                 user.useremail = email;
                 user.userObj = user;
                 user.uid = user.get_id();
->>>>>>> f252324bfd3dcf1003470d2e6b2dfec26f22e28c
                 Parent window;
                 window = FXMLLoader.load(getClass().getResource(""));
 
