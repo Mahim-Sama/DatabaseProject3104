@@ -7,24 +7,24 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.RegisterController">
    <children>
       <Label layoutX="77.0" layoutY="71.0" text="USERNAME" />
-      <TextField fx:id="username" layoutX="167.0" layoutY="67.0" prefHeight="26.0" prefWidth="306.0" promptText="ENTER YOUR USERNAME" />
+      <TextField layoutX="167.0" layoutY="67.0" prefHeight="26.0" prefWidth="306.0" promptText="ENTER YOUR USERNAME" />
       <Label layoutX="77.0" layoutY="144.0" text=" PHONE NO" />
-      <TextField fx:id="phone" layoutX="167.0" layoutY="140.0" prefHeight="26.0" prefWidth="306.0" promptText="ENTER PHONE NO." />
+      <TextField layoutX="167.0" layoutY="140.0" prefHeight="26.0" prefWidth="306.0" promptText="ENTER PHONE NO." />
       <Label layoutX="79.0" layoutY="112.0" text="EMAIL" />
-      <TextField fx:id="email" layoutX="167.0" layoutY="108.0" prefHeight="26.0" prefWidth="306.0" promptText="ENTER EMAIL ADDRESS" />
+      <TextField layoutX="167.0" layoutY="108.0" prefHeight="26.0" prefWidth="306.0" promptText="ENTER EMAIL ADDRESS" />
       <Label layoutX="77.0" layoutY="182.0" text="PASSWORD" />
-      <PasswordField fx:id="password" layoutX="167.0" layoutY="177.0" prefHeight="26.0" prefWidth="306.0" promptText="ENTER PASSWORD" />
-      <PasswordField fx:id="confirmpass" layoutX="167.0" layoutY="219.0" prefHeight="26.0" prefWidth="306.0" promptText="ENTER CONFIRMPASSWORD" />
+      <PasswordField layoutX="167.0" layoutY="177.0" prefHeight="26.0" prefWidth="306.0" promptText="ENTER PASSWORD" />
+      <PasswordField layoutX="167.0" layoutY="219.0" prefHeight="26.0" prefWidth="306.0" promptText="ENTER CONFIRMPASSWORD" />
       <Label layoutX="36.0" layoutY="223.0" text="CONFIRM PASSWORD" />
-      <Button layoutX="227.0" layoutY="266.0" mnemonicParsing="false" onAction="#RegisterButtonAction" text="REGISTER">
+      <Button layoutX="227.0" layoutY="266.0" mnemonicParsing="false" text="REGISTER">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <Button layoutX="409.0" layoutY="268.0" mnemonicParsing="false" onAction="#BackButtonAction" text="BACK">
+      <Button layoutX="403.0" layoutY="266.0" mnemonicParsing="false" onAction="#BackButtonAction" text="BACK">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
