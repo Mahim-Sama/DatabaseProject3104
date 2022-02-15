@@ -116,17 +116,4 @@ public class RegisterController {
         }
     }
 
-    public void InsertQuery() throws ClassNotFoundException{
-        DBConnection db = new DBConnection();
-        Connection conn = db.DatabaseConnect();
-        
-        String sql = "INSERT INTO \"User\" VALUES ('A','A','A','A','A')";
-        try{
-            Statement stmt = conn.createStatement();
-            stmt.executeUpdate(sql);
-            System.out.println("Inserted successfully");
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
 }
