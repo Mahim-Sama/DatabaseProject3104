@@ -30,6 +30,7 @@ public int get_id(){
     return this.id;
 }
 
+<<<<<<< HEAD
 public User(int id) throws SQLException {
     this.id = id;
 }
@@ -37,6 +38,10 @@ public User(int id) throws SQLException {
 public static User get_id(int id) throws SQLException{
     return new User(id);
 }
+=======
+    public User() {
+    }
+>>>>>>> 25c9c7c3eb75e6fda0f93919e9ed3c7dbfc855cb
 
 public String get_pass(){
     return this.pass;
