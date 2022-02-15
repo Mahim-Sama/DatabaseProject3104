@@ -10,18 +10,16 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="433.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.LoginController">
    <children>
       <Label layoutX="77.0" layoutY="94.0" text="username" />
-      <TextField layoutX="165.0" layoutY="90.0" prefHeight="26.0" prefWidth="381.0" promptText="username" />
-      <Label layoutX="78.0" layoutY="194.0" text="password" />
-      <PasswordField layoutX="165.0" layoutY="190.0" prefHeight="26.0" prefWidth="382.0" promptText="must be  4 characters or more" />
-      <Label layoutX="89.0" layoutY="146.0" text="Email" />
-      <TextField layoutX="165.0" layoutY="142.0" prefHeight="26.0" prefWidth="382.0" promptText="email" />
-      <Button layoutX="289.0" layoutY="248.0" mnemonicParsing="false" text="Log in">
+      <TextField fx:id="txt_username" layoutX="165.0" layoutY="90.0" prefHeight="26.0" prefWidth="381.0" promptText="username" />
+      <Label layoutX="84.0" layoutY="160.0" text="password" />
+      <PasswordField fx:id="txt_pass" layoutX="165.0" layoutY="155.0" prefHeight="26.0" prefWidth="382.0" promptText="must be  4 characters or more" />
+      <Button layoutX="259.0" layoutY="228.0" mnemonicParsing="false" onAction="#LogIN" text="Log in">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <Label layoutX="192.0" layoutY="294.0" text="Don&quot;t have an Account? Create one," textFill="#e10707" />
-      <Button layoutX="390.0" layoutY="290.0" mnemonicParsing="false" onAction="#RegisterAction" prefHeight="0.0" prefWidth="74.0" text="Register" textFill="#1505ef" />
-      <Label fx:id="label" layoutX="305.0" layoutY="340.0" />
+      <Label layoutX="163.0" layoutY="282.0" text="Don&quot;t have an Account? Create one," textFill="#e10707" />
+      <Button layoutX="365.0" layoutY="278.0" mnemonicParsing="false" onAction="#RegisterAction" prefHeight="0.0" prefWidth="74.0" text="Register" textFill="#1505ef" />
+      <Label fx:id="errorlabel_1" layoutX="305.0" layoutY="340.0" />
    </children>
 </AnchorPane>

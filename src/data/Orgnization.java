@@ -7,6 +7,16 @@ public class Orgnization {
     private String OrgPhone;
     private String OrgEmail;
     private String DonationType;
+
+    public Orgnization(int orgID, String orgName, String orgAddress, String orgPhone, String orgEmail,
+            String donationType) {
+        OrgID = orgID;
+        OrgName = orgName;
+        OrgAddress = orgAddress;
+        OrgPhone = orgPhone;
+        OrgEmail = orgEmail;
+        DonationType = donationType;
+    }
     
     public int getOrgID() {
         return OrgID;

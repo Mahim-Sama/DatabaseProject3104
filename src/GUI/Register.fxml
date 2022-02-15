@@ -10,16 +10,16 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.RegisterController">
    <children>
       <Label layoutX="77.0" layoutY="71.0" text="USERNAME" />
-      <TextField layoutX="167.0" layoutY="67.0" prefHeight="26.0" prefWidth="306.0" promptText="ENTER YOUR USERNAME" />
+      <TextField fx:id="txt_username" layoutX="167.0" layoutY="67.0" prefHeight="26.0" prefWidth="306.0" promptText="ENTER YOUR USERNAME" />
       <Label layoutX="77.0" layoutY="144.0" text=" PHONE NO" />
-      <TextField layoutX="167.0" layoutY="140.0" prefHeight="26.0" prefWidth="306.0" promptText="ENTER PHONE NO." />
+      <TextField fx:id="txt_phone" layoutX="167.0" layoutY="140.0" prefHeight="26.0" prefWidth="306.0" promptText="ENTER PHONE NO." />
       <Label layoutX="79.0" layoutY="112.0" text="EMAIL" />
-      <TextField layoutX="167.0" layoutY="108.0" prefHeight="26.0" prefWidth="306.0" promptText="ENTER EMAIL ADDRESS" />
+      <TextField fx:id="txt_mail" layoutX="167.0" layoutY="108.0" prefHeight="26.0" prefWidth="306.0" promptText="ENTER EMAIL ADDRESS" />
       <Label layoutX="77.0" layoutY="182.0" text="PASSWORD" />
-      <PasswordField layoutX="167.0" layoutY="177.0" prefHeight="26.0" prefWidth="306.0" promptText="ENTER PASSWORD" />
-      <PasswordField layoutX="167.0" layoutY="219.0" prefHeight="26.0" prefWidth="306.0" promptText="ENTER CONFIRMPASSWORD" />
+      <PasswordField fx:id="txt_pass" layoutX="167.0" layoutY="177.0" prefHeight="26.0" prefWidth="306.0" promptText="ENTER PASSWORD" />
+      <PasswordField fx:id="txt_conpass" layoutX="167.0" layoutY="219.0" prefHeight="26.0" prefWidth="306.0" promptText="ENTER CONFIRMPASSWORD" />
       <Label layoutX="36.0" layoutY="223.0" text="CONFIRM PASSWORD" />
-      <Button layoutX="227.0" layoutY="266.0" mnemonicParsing="false" text="REGISTER">
+      <Button layoutX="227.0" layoutY="266.0" mnemonicParsing="false" onAction="#RegisterButtonAction" text="REGISTER">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -29,6 +29,6 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <Label fx:id="errorlabel" layoutX="255.0" layoutY="320.0" />
+      <Label fx:id="errorlabel" layoutX="299.0" layoutY="344.0" />
    </children>
 </AnchorPane>

@@ -1,6 +1,7 @@
 
 import DataBase.DBConnection;
 import GUI.GUI_controller;
+import GUI.RegisterController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.*;
@@ -15,7 +16,9 @@ public class App extends Application {
     public static void main(String[] args) throws ClassNotFoundException {
         DBConnection dbc = new DBConnection();
         dbc.DatabaseConnect();
+        
         launch(args);
+        
         dbc.DisconnectDB(); 
     }
 
@@ -24,6 +27,8 @@ public class App extends Application {
         GUI_controller gui = new GUI_controller();
         gui.start(arg0);
     }
+
+    
  
 }
 
