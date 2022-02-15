@@ -100,20 +100,5 @@ public class RegisterController {
         }   
     }
 
-    public void SelectQuery() throws ClassNotFoundException{
-        DBConnection db = new DBConnection();
-        Connection conn = db.DatabaseConnect();
-        
-        String sql = "SELECT * FROM \"User\"";
-        try{
-            Statement stmt = conn.createStatement();
-            ResultSet rs = stmt.executeQuery(sql);
-            while(rs.next()){
-                System.out.println(rs.getString("UserName"));
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
 
 }
