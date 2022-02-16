@@ -48,7 +48,7 @@ public class LoginController {
             user.setPhone(rs.getString("phoneNo"));
 
             if(pass.equals(user.getPass())){
-                errorlabel_1.setText("LogIn Successful!");
+                errorlabel_1.setText("Login Successful!");
             }
             else{
                 errorlabel_1.setText("Wrong Password!");

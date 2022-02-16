@@ -27,8 +27,6 @@ public class App extends Application {
         GUI_controller gui = new GUI_controller();
         gui.start(arg0);
     }
-
-    
  
 }
 

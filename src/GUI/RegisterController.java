@@ -85,7 +85,7 @@ public class RegisterController {
         
         Connection conn = db.DatabaseConnect();
         String sql = "CREATE TABLE \"User\" " +
-                "(Userid int identity(1000,1) NOT NULL PRIMARY KEY," +
+                "(Userid int identity(1000000,1) NOT NULL PRIMARY KEY," +
                 "UserName varchar(50) unique NOT NULL," +
                 "Email varchar(50) unique NOT NULL check (email like '_%@_%.%_')," +
                 "PhoneNo varchar(50) NOT NULL check(PhoneNo like '01%_' and len(phoneNo) = 11)," +
