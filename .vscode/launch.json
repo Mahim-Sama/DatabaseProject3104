@@ -9,6 +9,13 @@
             "name": "Launch TableCreation",
             "request": "launch",
             "mainClass": "TableCreation",
+            "projectName": "DatabaseProject3104_b7e1b9bb"
+        },
+        {
+            "type": "java",
+            "name": "Launch TableCreation",
+            "request": "launch",
+            "mainClass": "TableCreation",
             "projectName": "RefugeeDataManagement_e84d24fa"
         },
         {
