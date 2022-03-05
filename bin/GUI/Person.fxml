@@ -8,18 +8,18 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Person_Controller">
    <children>
       <Label layoutX="44.0" layoutY="43.0" text="NAME" />
-      <TextField layoutX="123.0" layoutY="39.0" prefHeight="26.0" prefWidth="319.0" />
+      <TextField layoutX="123.0" layoutY="39.0" prefHeight="26.0" prefWidth="332.0" />
       <Label layoutX="14.0" layoutY="76.0" text="FATHER,S NAME" />
-      <TextField layoutX="123.0" layoutY="72.0" prefHeight="26.0" prefWidth="319.0" />
-      <TextField layoutX="123.0" layoutY="111.0" prefHeight="26.0" prefWidth="319.0" />
-      <TextField layoutX="123.0" layoutY="147.0" prefHeight="26.0" prefWidth="319.0" />
+      <TextField layoutX="123.0" layoutY="72.0" prefHeight="26.0" prefWidth="332.0" />
+      <TextField layoutX="123.0" layoutY="111.0" prefHeight="26.0" prefWidth="332.0" />
+      <TextField layoutX="123.0" layoutY="147.0" prefHeight="26.0" prefWidth="332.0" />
       <Label layoutX="11.0" layoutY="115.0" text="MOTHER,S NAME" />
       <Label layoutX="35.0" layoutY="160.0" text="ADDRESS" />
       <Label layoutX="59.0" layoutY="191.0" text="AGE" />
-      <TextField layoutX="123.0" layoutY="187.0" prefHeight="26.0" prefWidth="319.0" />
+      <TextField layoutX="123.0" layoutY="187.0" prefHeight="26.0" prefWidth="332.0" />
       <RadioButton layoutX="123.0" layoutY="263.0" mnemonicParsing="false" text="MALE" />
       <Label layoutX="38.0" layoutY="263.0" text="GENDER" />
       <RadioButton layoutX="219.0" layoutY="263.0" mnemonicParsing="false" text="FEMALE" />
@@ -27,7 +27,7 @@
       <Label layoutX="20.0" layoutY="302.0" text="BLOOD GROUP" />
       <ChoiceBox layoutX="123.0" layoutY="298.0" prefWidth="150.0" />
       <Label layoutX="13.0" layoutY="230.0" text="FAMILY MEMBER" />
-      <TextField layoutX="117.0" layoutY="226.0" prefHeight="26.0" prefWidth="332.0" />
+      <TextField layoutX="123.0" layoutY="226.0" prefHeight="26.0" prefWidth="332.0" />
       <Button layoutX="122.0" layoutY="344.0" mnemonicParsing="false" text="SAVE">
          <font>
             <Font name="System Bold" size="14.0" />
@@ -43,7 +43,7 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <Button layoutX="393.0" layoutY="344.0" mnemonicParsing="false" text="BACK">
+      <Button layoutX="393.0" layoutY="344.0" mnemonicParsing="false" onAction="#PersonBack" text="BACK">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>

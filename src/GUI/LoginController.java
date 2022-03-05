@@ -48,7 +48,12 @@ public class LoginController {
             user.setPhone(rs.getString("phoneNo"));
 
             if(pass.equals(user.getPass())){
-                errorlabel_1.setText("Login Successful!");
+                DashboardController dashboardControler = new DashboardController();
+                try {
+                    dashboardControler.start((Stage) ((Button) event.getSource()).getScene().getWindow());
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
             else{
                 errorlabel_1.setText("Wrong Password!");

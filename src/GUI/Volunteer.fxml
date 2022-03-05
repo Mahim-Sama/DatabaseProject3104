@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Volunteer_Cotroller">
    <children>
       <Label layoutX="271.0" layoutY="32.0" text="VOLUNTER" textFill="#1203e1" />
       <TextField layoutX="184.0" layoutY="62.0" prefHeight="26.0" prefWidth="298.0" />
@@ -41,7 +41,7 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <Button layoutX="424.0" layoutY="334.0" mnemonicParsing="false" text="BACK">
+      <Button layoutX="424.0" layoutY="334.0" mnemonicParsing="false" onAction="#VolunteerBack" text="BACK">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>

@@ -6,21 +6,21 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Problem_Controller">
    <children>
       <Label layoutX="249.0" layoutY="45.0" text="PROBLEM ANALYSIS" textFill="#2008f4">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="89.0" layoutY="84.0" text="NAME" />
+      <Label layoutX="67.0" layoutY="85.0" text="VICTIM" />
       <TextField layoutX="182.0" layoutY="80.0" prefHeight="26.0" prefWidth="312.0" />
       <TextField layoutX="182.0" layoutY="126.0" prefHeight="26.0" prefWidth="312.0" />
-      <Label layoutX="92.0" layoutY="131.0" text="ADDRESS" />
-      <Label layoutX="92.0" layoutY="183.0" text="PROBLEM" />
+      <Label layoutX="68.0" layoutY="131.0" text="ADDRESS" />
+      <Label layoutX="67.0" layoutY="184.0" text="PROBLEM" />
       <TextField layoutX="182.0" layoutY="179.0" prefHeight="26.0" prefWidth="312.0" />
       <TextField layoutX="182.0" layoutY="231.0" prefHeight="26.0" prefWidth="312.0" />
-      <Label layoutX="69.0" layoutY="235.0" text="PROBLEM STATUS" />
+      <Label layoutX="67.0" layoutY="236.0" text="PROBLEM STATUS" />
       <Button layoutX="93.0" layoutY="305.0" mnemonicParsing="false" text="SAVE">
          <font>
             <Font name="System Bold" size="14.0" />
@@ -36,7 +36,7 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <Button layoutX="429.0" layoutY="305.0" mnemonicParsing="false" text="BACK">
+      <Button layoutX="429.0" layoutY="305.0" mnemonicParsing="false" onAction="#ProblemBack" text="BACK">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
