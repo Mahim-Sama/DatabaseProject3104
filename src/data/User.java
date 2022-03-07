@@ -9,12 +9,12 @@ public class User {
     public User() {
     }
 
-    public User(String name, String email, String phone, String pass) {
-        this.name = name;
-        this.email = email;
-        this.phone = phone;
-        this.pass = pass;
-    }
+    // public User(String name, String email, String phone, String pass) {
+    //     this.name = name;
+    //     this.email = email;
+    //     this.phone = phone;
+    //     this.pass = pass;
+    // }
 
     public User(String name, String email, String phone, String pass, int userid) {
         this.setName(name);
@@ -24,7 +24,6 @@ public class User {
         this.setUserid(userid);
     }
 
-    
 
     public int getUserid() {
         return userid;

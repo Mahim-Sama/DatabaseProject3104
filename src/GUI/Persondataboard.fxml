@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="982.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Persondataboard_controller">
+   <children>
+      <TableView fx:id="table" layoutX="105.0" prefHeight="400.0" prefWidth="877.0">
+        <columns>
+          <TableColumn fx:id="ID" prefWidth="91.0" text="ID" />
+            <TableColumn fx:id="name" prefWidth="113.0" text="Name" />
+          <TableColumn fx:id="FatherName" prefWidth="117.0" text="Fatherś Name" />
+            <TableColumn fx:id="MotherName" prefWidth="124.0" text="Motherś Name" />
+            <TableColumn fx:id="Address" prefWidth="122.0" text="Address" />
+            <TableColumn fx:id="AGE" prefWidth="53.0" text="AGE" />
+            <TableColumn fx:id="FamilyMember" prefWidth="103.0" text="Family Members" />
+            <TableColumn fx:id="Gender" prefWidth="74.0" text="Gender" />
+            <TableColumn fx:id="BloodGroup" prefWidth="79.0" text="Blood Group" />
+        </columns>
+      </TableView>
+      <Button layoutX="25.0" layoutY="101.0" mnemonicParsing="false" text="UPDATE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="28.0" layoutY="155.0" mnemonicParsing="false" text="DELETE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="33.0" layoutY="361.0" mnemonicParsing="false" onAction="#PersondataboardBack" text="BACK">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
