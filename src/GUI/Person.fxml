@@ -42,7 +42,7 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <Button layoutX="393.0" layoutY="344.0" mnemonicParsing="false" onAction="#PersonBack" text="BACK">
+      <Button layoutX="532.0" layoutY="344.0" mnemonicParsing="false" onAction="#PersonBack" prefHeight="30.0" prefWidth="64.0" text="BACK">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -50,5 +50,10 @@
       <Label layoutX="244.0" layoutY="14.0" text="PERSON'S TABLE" textFill="#0526c9" />
       <Label fx:id="savelabel" layoutX="7.0" layoutY="378.0" />
       <Label layoutX="486.0" layoutY="14.0" text="* = required field" />
+      <Button layoutX="400.0" layoutY="344.0" mnemonicParsing="false" onAction="#ClearPersonScreen" text="CLEAR">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

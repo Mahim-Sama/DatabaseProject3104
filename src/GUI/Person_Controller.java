@@ -50,7 +50,7 @@ public class Person_Controller{
         String pFamMembers = txt_pFamMembers.getText();
         String pGender;
         String pBloodGroup = cb.getValue();
-
+        
         if(malebtn.isSelected()){
             pGender = "Male";
         }else if(femalebtn.isSelected()){
@@ -59,10 +59,16 @@ public class Person_Controller{
             pGender = "Transgender";
         }
 
-        if(pname != null && pGender!=null && pAge != null){
+        ToggleGroup grp = new ToggleGroup();
+
+        malebtn.setToggleGroup(grp);
+        femalebtn.setToggleGroup(grp);
+        transbtn.setToggleGroup(grp);
+
+        if(pname.isEmpty() == false && grp.getSelectedToggle() != null && pAge != null){
             try {
                 Connection con = db.DatabaseConnect();
-                String query = "INSERT INTO \"Person\"(pName,FatherName,MotherName,Address,Age,FamilyMembers,Gender,BloodGroup) VALUES('"+pname+"','"+pFatherName+"','"+pMotherName+"','"+pAddress+"',"+pAge+","+pFamMembers+",'"+pGender+"','"+pBloodGroup+"')";
+                String query = "INSERT INTO \"Person\"(pName,FatherName,MotherName,Address,Age,FamilyMembers,Gender,BloodGroup) VALUES('"+pname+"','"+pFatherName+"','"+pMotherName+"','"+pAddress+"',"+pAge+",'"+pFamMembers+"','"+pGender+"','"+pBloodGroup+"')";
                 Statement st = con.createStatement();
                 st.executeUpdate(query);
                 savelabel.setText("Saved Successfully!");
@@ -86,7 +92,7 @@ public class Person_Controller{
                 "MotherName varchar(50)," +
                 "Address varchar(50)," +
                 "Age int," +
-                "FamilyMembers int,"+
+                "FamilyMembers VARCHAR(50),"+
                 "Gender varchar(50)," +
                 "BloodGroup varchar(50)," +
                 ")";
@@ -115,6 +121,20 @@ public class Person_Controller{
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public void ClearPersonScreen(ActionEvent event){
+        txt_pname.setText("");
+        txt_pFatherName.setText("");
+        txt_pMotherName.setText("");
+        txt_pAddress.setText("");
+        txt_pAge.setText("");
+        txt_pFamMembers.setText("");
+        malebtn.setSelected(false);
+        femalebtn.setSelected(false);
+        transbtn.setSelected(false);
+        cb.setValue(null);
+        savelabel.setText("");
     }
 
 }

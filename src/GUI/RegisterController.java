@@ -54,7 +54,12 @@ public class RegisterController {
                     e.printStackTrace();
                 }
             }catch (SQLException e) {
-                errorlabel.setText("Couldn't Register Your Account!");
+                // if(){
+                //     errorlabel.setText("Username already exists");
+                // }
+                //have to fix this in the lowest else condiotion
+                // errorlabel.setText("Couldn't Register Your Account!");
+                e.printStackTrace();
             }catch(ClassNotFoundException e){
                 e.printStackTrace();
             }
