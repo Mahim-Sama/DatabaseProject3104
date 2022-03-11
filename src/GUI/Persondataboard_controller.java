@@ -87,9 +87,9 @@ public class Persondataboard_controller {
     
 
     public void PersondataboardBack(ActionEvent event){
-        DashboardController DC = new DashboardController();
+        Person_Controller PC = new Person_Controller();
         try {
-            DC.start((Stage) ((Button) event.getSource()).getScene().getWindow());
+            PC.start((Stage) ((Button) event.getSource()).getScene().getWindow());
         } catch (IOException e) {
             e.printStackTrace();
         }
