@@ -58,7 +58,7 @@ public class RegisterController {
                 //     errorlabel.setText("Username already exists");
                 // }
                 //have to fix this in the lowest else condiotion
-                // errorlabel.setText("Couldn't Register Your Account!");
+                //errorlabel.setText("Couldn't Register Your Account!");
                 e.printStackTrace();
             }catch(ClassNotFoundException e){
                 e.printStackTrace();

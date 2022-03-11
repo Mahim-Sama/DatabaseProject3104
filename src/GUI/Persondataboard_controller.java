@@ -7,7 +7,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 
 import DataBase.DBConnection;
-import data.personINFO;
+//import data.personINFO;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -17,50 +17,62 @@ import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.layout.VBox;
+//import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.scene.control.Button;
 
 public class Persondataboard_controller {
     Stage window10;
     Scene scene10;
-    VBox vbox;
     
-    private TableView<personINFO> table;
-    public ObservableList<personINFO> data;
+    public TableView<PersonTable> table;
+    public ObservableList<PersonTable> data;
 
-    private TableColumn<?,?> name;
-    private TableColumn<?,?> FatherName;
-    private TableColumn<?,?> MotherName;
-    private TableColumn<?,?> Address;
-    private TableColumn<?,?> AGE;
-    private TableColumn<?,?> FamilyMember;
-    private TableColumn<?,?> Gender;
-    private TableColumn<?,?> BloodGroup;   
+    public TableColumn<PersonTable, Integer> ID;
+    public TableColumn<PersonTable,String> name;
+    public TableColumn<PersonTable,String> FatherName;
+    public TableColumn<PersonTable,String> MotherName;
+    public TableColumn<PersonTable,String> Address;
+    public TableColumn<PersonTable,Integer> AGE;
+    public TableColumn<PersonTable,String> FamilyMember;
+    public TableColumn<PersonTable,String> Gender;
+    public TableColumn<PersonTable,String> BloodGroup;   
 
     DBConnection dbc = new DBConnection();
 
-    public void DataShow(){
+    public void start(Stage arg0) throws IOException {
+        window10 = arg0;
+        FXMLLoader fl = new FXMLLoader();
+        Parent root10 = fl.load(getClass().getResource("/GUI/Persondataboard.fxml").openStream());
+        Persondataboard_controller pdc = fl.getController();
+        
+        //datashow();
         data = FXCollections.observableArrayList();
-        PersonTableCell();
-
         try {
             Connection con = dbc.DatabaseConnect();
             Statement st = con.createStatement();
             String query = "SELECT * FROM Person";
-            ResultSet rs = st.executeQuery(query);
-            // need to fix the Gender dilemma.  
+            ResultSet rs = st.executeQuery(query);  
             while(rs.next()){
-                data.add(new personINFO(rs.getString("pName"),rs.getString("FatherName"),rs.getString("MotherName"),rs.getString("Address"),rs.getInt("Age"),rs.getInt("FamilyMembers"),/*rs.getString("Gender"),*/rs.getString("BloodGroup")));
+                data.add(new PersonTable(rs.getInt("PiD"), rs.getString("pName"),rs.getString("FatherName"),rs.getString("MotherName"),rs.getString("Address"),rs.getInt("Age"),rs.getString("FamilyMembers"),rs.getString("Gender"),rs.getString("BloodGroup")));    
+                
             }
+            pdc.data = data;
 
         } catch (Exception e) {
             e.printStackTrace();
         }
-        table.setItems(data);
+        pdc.PersonTableCell();
+        
+        //end datashow
+        scene10 = new Scene(root10);
+        window10.setScene(scene10);
+        window10.show();
     }
 
-    private void PersonTableCell(){
+
+    public void PersonTableCell(){
+        ID.setCellValueFactory(new PropertyValueFactory<>("ID"));
         name.setCellValueFactory(new PropertyValueFactory<>("name"));
         FatherName.setCellValueFactory(new PropertyValueFactory<>("FatherName"));
         MotherName.setCellValueFactory(new PropertyValueFactory<>("MotherName"));
@@ -69,15 +81,10 @@ public class Persondataboard_controller {
         FamilyMember.setCellValueFactory(new PropertyValueFactory<>("FamilyMember"));
         Gender.setCellValueFactory(new PropertyValueFactory<>("Gender"));
         BloodGroup.setCellValueFactory(new PropertyValueFactory<>("BloodGroup"));
+        table.setItems(data);
     }
+
     
-    public void start(Stage arg0) throws IOException {
-        window10 = arg0;
-        Parent root10 = FXMLLoader.load(getClass().getResource("/GUI/Persondataboard.fxml"));
-        scene10 = new Scene(root10);
-        window10.setScene(scene10);
-        window10.show();
-    }
 
     public void PersondataboardBack(ActionEvent event){
         DashboardController DC = new DashboardController();

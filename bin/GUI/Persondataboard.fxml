@@ -6,35 +6,35 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="982.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Persondataboard_controller">
+<AnchorPane prefHeight="494.0" prefWidth="604.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Persondataboard_controller">
    <children>
-      <TableView fx:id="table" layoutX="105.0" prefHeight="400.0" prefWidth="877.0">
+      <Button layoutX="105.0" layoutY="455.0" mnemonicParsing="false" text="DELETE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="536.0" layoutY="455.0" mnemonicParsing="false" onAction="#PersondataboardBack" text="BACK">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="14.0" layoutY="455.0" mnemonicParsing="false" text="UPDATE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <TableView fx:id="table" prefHeight="400.0" prefWidth="605.0">
         <columns>
-          <TableColumn fx:id="ID" prefWidth="91.0" text="ID" />
-            <TableColumn fx:id="name" prefWidth="113.0" text="Name" />
-          <TableColumn fx:id="FatherName" prefWidth="117.0" text="Fatherś Name" />
-            <TableColumn fx:id="MotherName" prefWidth="124.0" text="Motherś Name" />
-            <TableColumn fx:id="Address" prefWidth="122.0" text="Address" />
-            <TableColumn fx:id="AGE" prefWidth="53.0" text="AGE" />
-            <TableColumn fx:id="FamilyMember" prefWidth="103.0" text="Family Members" />
-            <TableColumn fx:id="Gender" prefWidth="74.0" text="Gender" />
-            <TableColumn fx:id="BloodGroup" prefWidth="79.0" text="Blood Group" />
+          <TableColumn fx:id="ID" maxWidth="168.0" prefWidth="142.0" text="ID" />
+            <TableColumn fx:id="name" maxWidth="200.0" minWidth="3.0" prefWidth="140.0" text="Name" />
+          <TableColumn fx:id="FatherName" maxWidth="330.0" prefWidth="163.0" text="Fatherś Name" />
+            <TableColumn fx:id="MotherName" maxWidth="280.0" prefWidth="175.0" text="Motherś Name" />
+            <TableColumn fx:id="Address" maxWidth="403.0" prefWidth="187.0" text="Address" />
+            <TableColumn fx:id="AGE" maxWidth="402.0" prefWidth="49.0" text="AGE" />
+            <TableColumn fx:id="FamilyMember" maxWidth="553.0" prefWidth="108.0" text="Family Members" />
+            <TableColumn fx:id="Gender" maxWidth="694.0" prefWidth="104.0" text="Gender" />
+            <TableColumn fx:id="BloodGroup" maxWidth="701.0" minWidth="0.0" prefWidth="84.0" text="Blood Group" />
         </columns>
       </TableView>
-      <Button layoutX="25.0" layoutY="101.0" mnemonicParsing="false" text="UPDATE">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Button>
-      <Button layoutX="28.0" layoutY="155.0" mnemonicParsing="false" text="DELETE">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Button>
-      <Button layoutX="33.0" layoutY="361.0" mnemonicParsing="false" onAction="#PersondataboardBack" text="BACK">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Button>
    </children>
 </AnchorPane>

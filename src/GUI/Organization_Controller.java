@@ -21,6 +21,11 @@ public class Organization_Controller {
         window7.show();
     }
 
+    
+    public void CreateOrgTable(){
+        
+    }
+    
     public void OrgBack(ActionEvent event){
         DashboardController DC = new DashboardController();
         try {

@@ -6,7 +6,7 @@ public class personINFO {
     private String personMother;
     private String personAddress;
     private int personAge;
-    private int Familymember;
+    private String Familymember;
     private String personGender;
 
     private int personID;
@@ -22,7 +22,7 @@ public class personINFO {
         this.personID = personID;
     }
 
-    public personINFO(String personName, String personFather, String personMother, String personAddress, int personAge, int Familymember, String personGender) {
+    public personINFO(String personName, String personFather, String personMother, String personAddress, int personAge, String Familymember, String personGender) {
         this.personName = personName;
         this.personFather = personFather;
         this.personMother = personMother;
@@ -51,11 +51,11 @@ public class personINFO {
         this.personGender = personGender;
     }
     
-    public int getFamilymember() {
+    public String getFamilymember() {
         return Familymember;
     }
 
-    public void setFamilymember(int familymember) {
+    public void setFamilymember(String familymember) {
         this.Familymember = familymember;
     }
 

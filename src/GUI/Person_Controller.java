@@ -42,6 +42,7 @@ public class Person_Controller{
     }    
     
     public void PersonSave(Event event){ 
+        
         String pname = txt_pname.getText();
         String pFatherName = txt_pFatherName.getText();
         String pMotherName = txt_pMotherName.getText();
