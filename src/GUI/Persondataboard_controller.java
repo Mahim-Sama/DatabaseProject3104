@@ -26,7 +26,7 @@ public class Persondataboard_controller {
     Scene scene10;
     
     public TableView<PersonTable> table;
-    public ObservableList<PersonTable> data;
+    private ObservableList<PersonTable> data;
 
     public TableColumn<PersonTable, Integer> ID;
     public TableColumn<PersonTable,String> name;
