@@ -5,7 +5,6 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 
 import DataBase.DBConnection;
-//import data.personINFO;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -15,7 +14,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-//import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.scene.control.Button;
 
@@ -38,29 +36,31 @@ public class OrganizationTableBoardController {
 
     public void start(Stage arg0) throws IOException {
         window11 = arg0;
-        Parent root11 = FXMLLoader.load(getClass().getResource("/GUI/OrganizationTableBoard.fxml"));
-        // FXMLLoader fl = new FXMLLoader();
-        // Parent root11 = fl.load(getClass().getResource("/GUI/OrganizationTableBoard.fxml").openStream());
-        // OrganizationTableBoardController otb = fl.getController();
+        //Parent root11 = FXMLLoader.load(getClass().getResource("/GUI/OrganizationTableBoard.fxml"));
+        FXMLLoader fl = new FXMLLoader();
+        Parent root11 = fl.load(getClass().getResource("/GUI/OrganizationTableBoard.fxml").openStream());
+        OrganizationTableBoardController otb = fl.getController();
         
         //datashow();
 
-        // data = FXCollections.observableArrayList();
-        // try {
-        //     Connection con = dbc.DatabaseConnect();
-        //     Statement st = con.createStatement();
-        //     String query = "SELECT * FROM Person";
-        //     ResultSet rs = st.executeQuery(query);  
-        //     while(rs.next()){
-        //         data.add(new OrganizationTable(rs.getInt("OiD"), rs.getString("oName"),rs.getString("Adress"),rs.getString("mail"),rs.getString("contactNo"),rs.getString("donationType")));    
+        data = FXCollections.observableArrayList();
+        try {
+            Connection con = dbc.DatabaseConnect();
+            Statement st = con.createStatement();
+            String query = "SELECT * FROM Organization";
+            ResultSet rs = st.executeQuery(query);  
+            while(rs.next()){
+                data.add(new OrganizationTable(rs.getInt("Oid"), rs.getString("OrgName"),rs.getString("Address"),rs.getString("mail"),rs.getString("contactNo"),rs.getString("donationType")));    
                 
-        //     }
-        //     otb.data = data;
+            }
+            // System.out.println(data.get(0).getName());
+            // System.out.println(data.get(0).getContact());
+            otb.data = data;
 
-        // } catch (Exception e) {
-        //     e.printStackTrace();
-        // }
-        // otb.OrgTableCell();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        otb.OrgTableCell();
     
         //end datashow
         scene11 = new Scene(root11);
@@ -74,7 +74,7 @@ public class OrganizationTableBoardController {
         name.setCellValueFactory(new PropertyValueFactory<>("name"));
         Address.setCellValueFactory(new PropertyValueFactory<>("Address"));
         mail.setCellValueFactory(new PropertyValueFactory<>("mail"));
-        contactNo.setCellValueFactory(new PropertyValueFactory<>("contactNo"));
+        contactNo.setCellValueFactory(new PropertyValueFactory<>("Contact"));
         donationType.setCellValueFactory(new PropertyValueFactory<>("donationType"));
         table.setItems(data);
     }

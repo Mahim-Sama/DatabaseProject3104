@@ -11,41 +11,39 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Volunteer_Cotroller">
    <children>
       <Label layoutX="271.0" layoutY="32.0" text="VOLUNTER" textFill="#1203e1" />
-      <TextField layoutX="184.0" layoutY="62.0" prefHeight="26.0" prefWidth="298.0" />
-      <TextField layoutX="182.0" layoutY="99.0" prefHeight="26.0" prefWidth="298.0" />
-      <TextField layoutX="184.0" layoutY="137.0" prefHeight="26.0" prefWidth="298.0" />
-      <TextField layoutX="184.0" layoutY="175.0" prefHeight="26.0" prefWidth="298.0" />
-      <TextField layoutX="182.0" layoutY="209.0" prefHeight="26.0" prefWidth="298.0" />
+      <TextField fx:id="txt_vOrgName" layoutX="184.0" layoutY="62.0" prefHeight="26.0" prefWidth="298.0" />
+      <TextField fx:id="txt_vName" layoutX="184.0" layoutY="99.0" prefHeight="26.0" prefWidth="298.0" />
+      <TextField fx:id="txt_vDesignation" layoutX="184.0" layoutY="137.0" prefHeight="26.0" prefWidth="298.0" />
+      <TextField fx:id="txt_vEmail" layoutX="184.0" layoutY="175.0" prefHeight="26.0" prefWidth="298.0" />
+      <TextField fx:id="txt_vContact" layoutX="184.0" layoutY="209.0" prefHeight="26.0" prefWidth="298.0" />
       <Label layoutX="32.0" layoutY="66.0" text="ORGANIZATION NAME" />
-      <Label layoutX="80.0" layoutY="103.0" text="NAME" />
-      <Label layoutX="56.0" layoutY="141.0" text="DESIGNATION" />
+      <Label layoutX="80.0" layoutY="103.0" text="NAME*" />
+      <Label layoutX="56.0" layoutY="141.0" text="DESIGNATION*" />
       <Label layoutX="78.0" layoutY="179.0" text="EMAIL" />
-      <Label layoutX="57.0" layoutY="213.0" text="CONTACT NO" />
-      <Label layoutX="56.0" layoutY="251.0" text="BLOOD GROUP" />
-      <ChoiceBox layoutX="189.0" layoutY="247.0" prefWidth="150.0" />
-      <Label layoutX="75.0" layoutY="288.0" text="GENDER" />
-      <RadioButton layoutX="183.0" layoutY="288.0" mnemonicParsing="false" text="MALE" />
-      <RadioButton layoutX="301.0" layoutY="288.0" mnemonicParsing="false" text="FEMALE" />
-      <Button layoutX="143.0" layoutY="334.0" mnemonicParsing="false" text="SAVE">
+      <Label layoutX="57.0" layoutY="213.0" text="CONTACT NO*" />
+      <Label layoutX="56.0" layoutY="251.0" text="BLOOD GROUP*" />
+      <ChoiceBox fx:id="cb" layoutX="189.0" layoutY="247.0" prefWidth="150.0" />
+      <Label layoutX="75.0" layoutY="288.0" text="GENDER*" />
+      <RadioButton fx:id="malebtn" layoutX="183.0" layoutY="288.0" mnemonicParsing="false" text="MALE" />
+      <RadioButton fx:id="femalebtn" layoutX="301.0" layoutY="288.0" mnemonicParsing="false" text="FEMALE" />
+      <Button layoutX="74.0" layoutY="334.0" mnemonicParsing="false" text="SAVE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <Button layoutX="227.0" layoutY="334.0" mnemonicParsing="false" text="UPDATE">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Button>
-      <Button layoutX="325.0" layoutY="334.0" mnemonicParsing="false" text="DELETE">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Button>
-      <Button layoutX="424.0" layoutY="334.0" mnemonicParsing="false" onAction="#VolunteerBack" text="BACK">
+      <Button layoutX="525.0" layoutY="334.0" mnemonicParsing="false" onAction="#VolunteerBack" text="BACK">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
       <Label layoutX="209.0" layoutY="14.0" text="REFUGEE CAMP MANAGEMENT SYSTEM" textFill="#d90b0b" />
+      <Button layoutX="170.0" layoutY="337.0" mnemonicParsing="false" text="SHOW">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="466.0" layoutY="6.0" prefHeight="17.0" prefWidth="114.0" text="* = Required field" />
+      <Label fx:id="saveLabel" layoutX="32.0" layoutY="369.0" />
+      <RadioButton fx:id="transbtn" layoutX="417.0" layoutY="288.0" mnemonicParsing="false" text="Trans" />
    </children>
 </AnchorPane>

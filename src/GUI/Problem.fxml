@@ -6,41 +6,41 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Problem_Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="524.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Problem_Controller">
    <children>
-      <Label layoutX="249.0" layoutY="45.0" text="PROBLEM ANALYSIS" textFill="#2008f4">
+      <Label layoutX="192.0" layoutY="44.0" text="PROBLEM ANALYSIS" textFill="#2008f4">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="67.0" layoutY="85.0" text="VICTIM" />
-      <TextField layoutX="182.0" layoutY="80.0" prefHeight="26.0" prefWidth="312.0" />
-      <TextField layoutX="182.0" layoutY="126.0" prefHeight="26.0" prefWidth="312.0" />
-      <Label layoutX="68.0" layoutY="131.0" text="ADDRESS" />
-      <Label layoutX="67.0" layoutY="184.0" text="PROBLEM" />
-      <TextField layoutX="182.0" layoutY="179.0" prefHeight="26.0" prefWidth="312.0" />
-      <TextField layoutX="182.0" layoutY="231.0" prefHeight="26.0" prefWidth="312.0" />
-      <Label layoutX="67.0" layoutY="236.0" text="PROBLEM STATUS" />
-      <Button layoutX="93.0" layoutY="305.0" mnemonicParsing="false" text="SAVE">
+      <Label layoutX="67.0" layoutY="85.0" text="VICTIM*" />
+      <TextField fx:id="txt_victim" layoutX="182.0" layoutY="80.0" prefHeight="26.0" prefWidth="312.0" />
+      <Label layoutX="69.0" layoutY="143.0" text="PROBLEM*" />
+      <TextField fx:id="txt_problem" layoutX="182.0" layoutY="138.0" prefHeight="26.0" prefWidth="312.0" />
+      <TextField fx:id="txt_PrbStatus" layoutX="182.0" layoutY="196.0" prefHeight="26.0" prefWidth="312.0" />
+      <Label layoutX="58.0" layoutY="200.0" text="PROBLEM STATUS*" />
+      <Button layoutX="236.0" layoutY="254.0" mnemonicParsing="false" onAction="#SaveProblem" text="SAVE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <Button layoutX="201.0" layoutY="305.0" mnemonicParsing="false" text="UPDATE">
+      <Button layoutX="455.0" layoutY="356.0" mnemonicParsing="false" onAction="#ProblemBack" text="BACK">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <Button layoutX="312.0" layoutY="305.0" mnemonicParsing="false" text="DELETE">
+      <Label layoutX="155.0" layoutY="14.0" text="REFUGEE CAMP MANAGEMENT SYSTEM" textFill="#dc1010" />
+      <Button layoutX="52.0" layoutY="359.0" mnemonicParsing="false" onAction="#showPrbtable" text="SHOW">
          <font>
-            <Font name="System Bold" size="14.0" />
+            <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button layoutX="429.0" layoutY="305.0" mnemonicParsing="false" onAction="#ProblemBack" text="BACK">
+      <Button layoutX="129.0" layoutY="359.0" mnemonicParsing="false" onAction="#clearProbTable" text="CLEAR">
          <font>
-            <Font name="System Bold" size="14.0" />
+            <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Label layoutX="192.0" layoutY="21.0" text="REFUGEE CAMP MANAGEMENT SYSTEM" textFill="#dc1010" />
+      <Label layoutX="213.0" layoutY="314.0" />
+      <Label layoutX="409.0" layoutY="6.0" prefHeight="17.0" prefWidth="109.0" text="* = required fields" />
    </children>
 </AnchorPane>

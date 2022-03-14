@@ -14,12 +14,12 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <Button layoutX="176.0" layoutY="189.0" mnemonicParsing="false" onAction="#OrganizationButtonAction" text="ORGANIZATION">
+      <Button layoutX="282.0" layoutY="189.0" mnemonicParsing="false" onAction="#OrganizationButtonAction" text="ORGANIZATION">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <Button layoutX="443.0" layoutY="189.0" mnemonicParsing="false" onAction="#ProblemButtonAction" text="PROBLEM">
+      <Button layoutX="176.0" layoutY="189.0" mnemonicParsing="false" onAction="#ProblemButtonAction" text="PROBLEM">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -34,7 +34,7 @@
             <Font size="10.0" />
          </font>
       </Label>
-      <Button layoutX="330.0" layoutY="189.0" mnemonicParsing="false" onAction="#VolunterButtonAction" text="VOLUNTER">
+      <Button layoutX="437.0" layoutY="189.0" mnemonicParsing="false" onAction="#VolunterButtonAction" text="VOLUNTER">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
