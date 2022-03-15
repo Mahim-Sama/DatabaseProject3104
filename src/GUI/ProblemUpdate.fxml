@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="524.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Problem_Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="524.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ProblemUpdateController">
    <children>
       <Label layoutX="192.0" layoutY="44.0" text="PROBLEM ANALYSIS" textFill="#2008f4">
          <font>
@@ -19,28 +19,21 @@
       <TextField fx:id="txt_problem" layoutX="182.0" layoutY="138.0" prefHeight="26.0" prefWidth="312.0" />
       <TextField fx:id="txt_PrbStatus" layoutX="182.0" layoutY="196.0" prefHeight="26.0" prefWidth="312.0" />
       <Label layoutX="58.0" layoutY="200.0" text="PROBLEM STATUS*" />
-      <Button layoutX="236.0" layoutY="254.0" mnemonicParsing="false" onAction="#SaveProblem" text="SAVE">
+      <Button layoutX="236.0" layoutY="254.0" mnemonicParsing="false" onAction="#SaveButton" text="SAVE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <Button layoutX="455.0" layoutY="356.0" mnemonicParsing="false" onAction="#ProblemBack" text="BACK">
+      <Button layoutX="455.0" layoutY="356.0" mnemonicParsing="false" onAction="#UpdateBack" text="BACK">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
       <Label layoutX="155.0" layoutY="14.0" text="REFUGEE CAMP MANAGEMENT SYSTEM" textFill="#dc1010" />
-      <Button layoutX="52.0" layoutY="359.0" mnemonicParsing="false" onAction="#showPrbtable" text="SHOW">
+      <Button layoutX="63.0" layoutY="359.0" mnemonicParsing="false" onAction="#clearProbUpdateTable" text="CLEAR">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button layoutX="129.0" layoutY="359.0" mnemonicParsing="false" onAction="#clearProbTable" text="CLEAR">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Button>
-      <Label fx:id="label_l" layoutX="213.0" layoutY="314.0" />
-      <Label layoutX="409.0" layoutY="6.0" prefHeight="17.0" prefWidth="109.0" text="* = required fields" />
    </children>
 </AnchorPane>

@@ -9,12 +9,12 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="524.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.problemTableBoardController">
    <children>
-      <Button layoutX="23.0" layoutY="476.0" mnemonicParsing="false" text="UPDATE">
+      <Button layoutX="23.0" layoutY="476.0" mnemonicParsing="false" onAction="#UpdateFromProblem" text="UPDATE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <Button layoutX="117.0" layoutY="476.0" mnemonicParsing="false" text="DELETE">
+      <Button layoutX="117.0" layoutY="476.0" mnemonicParsing="false" onAction="#deleteFromProblem" text="DELETE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>

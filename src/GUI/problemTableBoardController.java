@@ -55,7 +55,7 @@ public class problemTableBoardController {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        otb.ProbTableCell();;
+        otb.ProbTableCell();
     
         //end datashow
         scene12 = new Scene(root12);
@@ -72,7 +72,39 @@ public class problemTableBoardController {
         table.setItems(data);
     }
 
+
     
+    public void UpdateFromProblem(ActionEvent event){
+        ProblemTable pt = table.getSelectionModel().getSelectedItem();
+        if(pt == null){
+            return;
+        }
+        ProblemUpdateController pb = new ProblemUpdateController();
+        try {
+            pb.GetProblemData(pt);
+            pb.start((Stage) ((Button) event.getSource()).getScene().getWindow());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    
+    public void deleteFromProblem(ActionEvent event){
+        ProblemTable pt = table.getSelectionModel().getSelectedItem();
+        if(pt == null){
+            return;
+        }
+        int id = pt.getID();
+        try {
+            Connection con = dbc.DatabaseConnect();
+            String query = "DELETE FROM Problem WHERE ID = '"+id+"'";
+            Statement st = con.createStatement();
+            st.executeUpdate(query);
+            data.remove(pt);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     public void ProbdataboardBack(ActionEvent event){
         Problem_Controller pc = new Problem_Controller();

@@ -84,7 +84,36 @@ public class Persondataboard_controller {
         table.setItems(data);
     }
 
-    
+    public void deleteFromPerson(ActionEvent event){
+        PersonTable pt = table.getSelectionModel().getSelectedItem();
+        if(pt == null){
+            return;
+        }
+        int id = pt.getID();
+        try {
+            Connection con = dbc.DatabaseConnect();
+            Statement st = con.createStatement();
+            String query = "DELETE FROM Person WHERE PiD = '"+id+"'";
+            st.executeUpdate(query);
+            data.remove(pt);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void UpdateFromPerson(ActionEvent event){
+        PersonTable pt = table.getSelectionModel().getSelectedItem();
+        if(pt == null){
+            return;
+        }
+        PersonUpdateController puc = new PersonUpdateController();
+        try {
+            puc.GetPersonData(pt);
+            puc.start((Stage) ((Button) event.getSource()).getScene().getWindow());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     public void PersondataboardBack(ActionEvent event){
         Person_Controller PC = new Person_Controller();

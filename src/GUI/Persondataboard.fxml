@@ -8,7 +8,7 @@
 
 <AnchorPane prefHeight="494.0" prefWidth="604.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Persondataboard_controller">
    <children>
-      <Button layoutX="105.0" layoutY="455.0" mnemonicParsing="false" text="DELETE">
+      <Button layoutX="105.0" layoutY="455.0" mnemonicParsing="false" onAction="#deleteFromPerson" text="DELETE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
@@ -18,7 +18,7 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button layoutX="14.0" layoutY="455.0" mnemonicParsing="false" text="UPDATE">
+      <Button layoutX="14.0" layoutY="455.0" mnemonicParsing="false" onAction="#UpdateFromPerson" text="UPDATE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>

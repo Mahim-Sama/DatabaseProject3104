@@ -1,28 +1,28 @@
 package GUI;
 
-public class VolunteerTable {
+public class VolunteerTableConstructor {
     private int ID;
     private String vName;
-    private String vOrgName;
+    private String vOrg;
     private String vDesignation;
+    private String vMail;
     private String vContact;
-    private String vEmail;
-    private String vBloodGroup;
     private String vGender;
+    private String vBloodGroup;
 
-    public VolunteerTable() {
+    public VolunteerTableConstructor() {
     }
 
-    public VolunteerTable(int iD, String vName, String vOrgName, String vDesignation, String vContact, String vEmail,
-            String vBloodGroup, String vGender) {
+    public VolunteerTableConstructor(int iD, String vName, String vOrg, String vDesignation, String vMail,String vContact,
+     String vGender,  String vBloodGroup) {
         setID(iD);
         this.setvName(vName);
-        this.setvOrgName(vOrgName);
+        this.setvOrgName(vOrg);
         this.setvDesignation(vDesignation);
+        this.setvEmail(vMail);
         this.setvContact(vContact);
-        this.setvEmail(vEmail);
-        this.setvBloodGroup(vBloodGroup);
         this.setvGender(vGender);
+        this.setvBloodGroup(vBloodGroup);
     }
 
     public String getvGender() {
@@ -42,11 +42,11 @@ public class VolunteerTable {
     }
 
     public String getvEmail() {
-        return vEmail;
+        return vMail;
     }
 
-    public void setvEmail(String vEmail) {
-        this.vEmail = vEmail;
+    public void setvEmail(String vMail) {
+        this.vMail = vMail;
     }
 
     public String getvContact() {
@@ -66,11 +66,11 @@ public class VolunteerTable {
     }
 
     public String getvOrgName() {
-        return vOrgName;
+        return vOrg;
     }
 
-    public void setvOrgName(String vOrgName) {
-        this.vOrgName = vOrgName;
+    public void setvOrgName(String vOrg) {
+        this.vOrg = vOrg;
     }
 
     public String getvName() {
