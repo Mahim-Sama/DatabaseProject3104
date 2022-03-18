@@ -7,6 +7,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 
 import DataBase.DBConnection;
+import data.PersonTable;
 //import data.personINFO;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -93,7 +94,7 @@ public class Persondataboard_controller {
         try {
             Connection con = dbc.DatabaseConnect();
             Statement st = con.createStatement();
-            String query = "DELETE FROM Person WHERE PiD = '"+id+"'";
+            String query = "DELETE FROM Person WHERE PiD = "+id+"";
             st.executeUpdate(query);
             data.remove(pt);
         } catch (Exception e) {

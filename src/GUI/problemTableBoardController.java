@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 
 import DataBase.DBConnection;
+import data.ProblemTable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -97,7 +98,7 @@ public class problemTableBoardController {
         int id = pt.getID();
         try {
             Connection con = dbc.DatabaseConnect();
-            String query = "DELETE FROM Problem WHERE ID = '"+id+"'";
+            String query = "DELETE FROM Problem WHERE ID = "+id+"";
             Statement st = con.createStatement();
             st.executeUpdate(query);
             data.remove(pt);

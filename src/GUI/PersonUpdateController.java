@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.sql.Statement;
 
 import DataBase.DBConnection;
+import data.PersonTable;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

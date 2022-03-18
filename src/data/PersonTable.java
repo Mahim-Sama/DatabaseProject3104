@@ -1,4 +1,4 @@
-package GUI;
+package data;
 
 public class PersonTable {
 
