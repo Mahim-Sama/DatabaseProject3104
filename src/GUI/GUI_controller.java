@@ -2,16 +2,16 @@ package GUI;
 
 import java.io.IOException;
 
-import javafx.application.Application;
+//import javafx.application.Application;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
+//import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 //import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.scene.*;
 import javafx.scene.control.Button;
-import javafx.scene.layout.AnchorPane;
+
 
 public class GUI_controller {
     double x = 0,y = 0;
