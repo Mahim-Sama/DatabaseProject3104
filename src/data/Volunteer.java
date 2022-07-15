@@ -1,6 +1,7 @@
 package data;
 
 public class Volunteer {
+    
     private int volunteerID;
     private String volunteerName;
     private String volunteerDesignation;
@@ -9,6 +10,18 @@ public class Volunteer {
     private String volunteerAddress;
     private String volunteerGender;
     private String volunteerBloodGroup;
+
+    public Volunteer(int volunteerID, String volunteerName, String volunteerDesignation, String volunteerEmail,
+            String volunteerPhone, String volunteerAddress, String volunteerGender, String volunteerBloodGroup) {
+        this.volunteerID = volunteerID;
+        this.volunteerName = volunteerName;
+        this.volunteerDesignation = volunteerDesignation;
+        this.volunteerEmail = volunteerEmail;
+        this.volunteerPhone = volunteerPhone;
+        this.volunteerAddress = volunteerAddress;
+        this.volunteerGender = volunteerGender;
+        this.volunteerBloodGroup = volunteerBloodGroup;
+    }
 
     public int getVolunteerID() {
         return volunteerID;

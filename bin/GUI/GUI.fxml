@@ -2,10 +2,13 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
-
+<?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.GUI_controller">
    <children>
-      <Button layoutX="266.0" layoutY="355.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="69.0" text="Button" />
+      <Button layoutX="263.0" layoutY="254.0" mnemonicParsing="false" onAction="#onClickListener" prefHeight="31.0" prefWidth="74.0" text="LET'S GO" textFill="#e8280ffa">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Button>
    </children>
 </AnchorPane>

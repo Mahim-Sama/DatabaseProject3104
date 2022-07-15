@@ -4,6 +4,10 @@ public class Problem{
     private String problemStatus;
     private String problemType;   
 
+    public Problem(String problemStatus, String problemType) {
+        this.problemStatus = problemStatus;
+        this.problemType = problemType;
+    }
     public String getProblemType() {
         return problemType;
     }
