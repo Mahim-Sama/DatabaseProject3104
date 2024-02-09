@@ -1,2 +1,2 @@
         ### README ###
-Basic Database Project With JavaFX        
+Basic Database Project With, Java-SQL-JavaFX
